@@ -22,6 +22,6 @@ module.exports = {
     'no-unused-vars': 'off',
     'no-alert': 'off',
     'no-console': 'off',
-    'linebreak-style': ['error', 'windows'],
+    'linebreak-style': 0,
   },
 };
