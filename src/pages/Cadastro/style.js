@@ -10,10 +10,12 @@ const useStyles = makeStyles({
   },
 
   form: {
-    backgroundColor: '#ccc',
     width: '25rem',
     height: '34rem',
     textAlign: 'center',
+    backgroundColor: '#fff',
+    borderRadius: '0.3rem',
+    boxShadow: '1px 1px 5px 0px #999',
   },
 
   input: {
