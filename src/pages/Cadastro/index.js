@@ -19,12 +19,12 @@ export default function Cadastro() {
   const [prazo, setPrazo] = useState('');
   const [ncm, setNcm] = useState('');
 
-  function Cadastrar() {
+  async function Cadastrar() {
     if (!nome || !vista || !prazo || !ncm) {
       return alert('Todos os campos devem ser preenchidos!');
     }
 
-    api
+    await api
       .post('./produto', {
         nome,
         vista,
