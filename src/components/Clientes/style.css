@@ -1,0 +1,82 @@
+.clientes {
+  width: 100%;
+  padding-top: 1rem;
+}
+
+.row {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.card {
+border-radius: 5px;
+box-shadow: 7px 7px 13px 0px rgba(50, 50, 50, 0.22);
+padding: 20px;
+width: 300px;
+transition: all 0.3s ease-out;
+background-color: #fff;
+}
+
+.card:hover {
+transform: translateY(-5px);
+cursor: pointer;
+}
+
+.card p {
+color: #a3a5ae;
+font-size: 16px;
+}
+
+.image {
+float: right;
+max-width: 50px;
+max-height: 50px;
+}
+
+.blue {
+border-left: 3px solid #4895ff;
+}
+
+.green {
+border-left: 3px solid #3bb54a;
+}
+
+.red {
+border-left: 3px solid #b3404a;
+}
+
+.form {
+width: 98%;
+height: calc(100vh - 280px);
+margin: 0 auto;
+margin-top: 1rem;
+padding-top: 0.5rem;
+border-radius: 0.5rem;
+box-shadow: 7px 7px 13px 0px rgba(50, 50, 50, 0.22);
+background-color: #fff;
+text-align: center;
+}
+
+.form input {
+width: 60%;
+height: 2rem;
+border-radius: 0.5rem;
+margin-bottom: 0.4rem;
+padding-left: 0.5rem;
+font-size: 1rem;
+}
+
+.form button {
+display: block;
+margin: 0 auto;
+width: 7rem;
+height: 2rem;
+background-color: #4895ff;
+border-radius: 0.5rem;
+cursor: pointer;
+}
+
+table {
+  width: 100%;
+}

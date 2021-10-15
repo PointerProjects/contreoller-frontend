@@ -23,5 +23,7 @@ module.exports = {
     'no-alert': 'off',
     'no-console': 'off',
     'linebreak-style': 0,
+    'import/no-named-as-default': 0,
+    'eslint-disable-next-line': 'off'
   },
 };
