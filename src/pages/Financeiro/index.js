@@ -1,12 +1,16 @@
 import React from 'react';
+import Navbar from '../../components/NavBar';
 
-function Products() {
+function Financeiro() {
   return (
-    <div className='products'>
-      <h1>Finaceiro</h1>
-      <p>Em construção...</p>
+    <div className='financeiro'>
+      <Navbar />
+      <div className="main">
+        <h1>Financeiro...</h1>
+        <p>Em construção...</p>
+      </div>
     </div>
   );
 }
 
-export default Products;
+export default Financeiro;

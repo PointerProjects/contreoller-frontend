@@ -1,10 +1,15 @@
 import React from 'react';
 
-import { 
-  FcBarChart, 
-  FcBusinessContact, 
+import {
+  FcBusinessman,
+  FcHome, 
+  FcGlobe,
+  FcManager,
+  FcShipped,
+  FcSafe,
   FcInfo, 
   FcRules, 
+  FcSupport,
   FcOvertime, 
   FcImport, 
   FcCurrencyExchange 
@@ -13,15 +18,21 @@ import {
 
 export const SidebarData = [
   {
-    title: 'Cadastros Básicos',
+    title: 'Clientes',
     path: '/',
-    icon: <FcBusinessContact />,
+    icon: <FcBusinessman />,
     cName: 'nav-text'
   },
   {
-    title: 'Controle',
-    path: '/controle',
-    icon: <FcBarChart />,
+    title: 'Imóveis',
+    path: '/imoveis',
+    icon: <FcHome />,
+    cName: 'nav-text',
+  },
+  {
+    title: 'Aluguéis',
+    path: '/alugueis',
+    icon: <FcOvertime />,
     cName: 'nav-text'
   },
   {
@@ -30,16 +41,41 @@ export const SidebarData = [
     icon: <FcCurrencyExchange />,
     cName: 'nav-text'
   },
-  {
-    title: 'Agendamentos',
-    path: '/agendamentos',
-    icon: <FcOvertime />,
-    cName: 'nav-text'
-  },
+  
   {
     title: 'Relatórios',
     path: '/relatorios',
     icon: <FcRules />,
+    cName: 'nav-text'
+  },
+  {
+    title: 'Cidades',
+    path: '/cidades',
+    icon: <FcGlobe />,
+    cName: 'nav-text'
+  },
+  {
+    title: 'Funcionários',
+    path: '/funcionarios',
+    icon: <FcManager />,
+    cName: 'nav-text'
+  },
+  {
+    title: 'Forncedores',
+    path: '/fornecedores',
+    icon: <FcShipped />,
+    cName: 'nav-text'
+  },
+  {
+    title: 'Bancos',
+    path: '/bancos',
+    icon: <FcSafe />,
+    cName: 'nav-text'
+  },
+  {
+    title: 'Gerais',
+    path: '/gerais',
+    icon: <FcSupport />,
     cName: 'nav-text'
   },
   {

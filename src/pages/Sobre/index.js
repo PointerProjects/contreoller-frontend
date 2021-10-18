@@ -1,12 +1,16 @@
 import React from 'react';
+import Navbar from '../../components/NavBar';
 
-function Products() {
+function Sobre() {
   return (
-    <div className='products'>
-      <h1>Sobre</h1>
-      <p>Em construção...</p>
+    <div className='sobre'>
+      <Navbar />
+      <div className="main">
+        <h1>Sobre...</h1>
+        <p>Em construção...</p>
+      </div>
     </div>
   );
 }
 
-export default Products;
+export default Sobre;

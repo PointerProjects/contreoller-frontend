@@ -1,12 +1,16 @@
 import React from 'react';
+import Navbar from '../../components/NavBar';
 
-function Products() {
+function Relatorios() {
   return (
-    <div className='products'>
-      <h1>Relatórios</h1>
-      <p>Em construção...</p>
+    <div className='relatorios'>
+      <Navbar />
+      <div className="main">
+        <h1>Relatórios...</h1>
+        <p>Em construção...</p>
+      </div>
     </div>
   );
 }
 
-export default Products;
+export default Relatorios;

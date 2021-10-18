@@ -1,12 +1,18 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
-function Products() {
+import './style.css';
+
+function Login() {
   return (
-    <div className='products'>
+    <div className='login'>
       <h1>Login</h1>
       <p>Em construção...</p>
+      <Link to='/'>
+        <button>Entrar</button>
+      </Link>
     </div>
   );
 }
 
-export default Products;
+export default Login;
