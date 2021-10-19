@@ -19,7 +19,6 @@
     width: 5rem;
     height: 1.5rem;
     font-size: 1rem;
-    outline: 0;
 }
 
 .historico .button-selected{
@@ -31,7 +30,7 @@
 }
 
 table, td, th {
-    border: 1px solid black;
+    border-bottom: 1px solid black;
 }
   
 table {
