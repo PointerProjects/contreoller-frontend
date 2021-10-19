@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
 import Login from '../pages/Login';
+import PaginaInicial from '../pages/PaginaInicial';
 import Clientes from '../pages/Clientes';
 import Imoveis from '../pages/Imoveis';
 import Alugueis from '../pages/Alugueis';
@@ -20,7 +21,8 @@ export default function RouteWraper() {
     <BrowserRouter>
       <Switch>
         <Route path="/login" component={Login} />
-        <Route path="/" exact component={Clientes} />
+        <Route path="/" exact component={PaginaInicial} />
+        <Route path="/clientes" exact component={Clientes} />
         <Route path="/imoveis" exact component={Imoveis} />
         <Route path="/alugueis" component={Alugueis} />
         <Route path="/financeiro" component={Financeiro} />

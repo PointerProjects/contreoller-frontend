@@ -6,31 +6,13 @@
 }
 
 body, html {
-  background-color: #d8e6ed;
+  background-color: #fff;
   font-size: 20px;
   width: 100%;
 }
 
 ::-webkit-scrollbar {
-  width: 10px;
-}
-
-/* Fundo da barra de rolagem */
-::-webkit-scrollbar-track-piece {
-  background-color: #EEE;
-  border-left: 1px solid #CCC
-}
-
-/* Cor do indicador de rolagem */
-::-webkit-scrollbar-thumb:vertical,
-::-webkit-scrollbar-thumb:horizontal {
-  background-color: #BAC0C4
-}
-
-/* Cor do indicador de rolagem - ao passar o mouse */
-::-webkit-scrollbar-thumb:vertical:hover,
-::-webkit-scrollbar-thumb:horizontal:hover {
-  background-color: #717171
+  width: 0px;
 }
 
 .main {
@@ -38,7 +20,6 @@ body, html {
   height: calc(100vh - 80px);
   margin: 0 auto;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
 }

@@ -1,93 +1,94 @@
 import React from 'react';
 
 import {
-  FcBusinessman,
-  FcHome, 
-  FcGlobe,
-  FcManager,
-  FcShipped,
-  FcSafe,
-  FcInfo, 
-  FcRules, 
-  FcSupport,
-  FcOvertime, 
-  FcImport, 
-  FcCurrencyExchange 
-} from "react-icons/fc";
+  GoPerson,
+  GoCalendar,
+  GoFile,
+  GoGear,
+  GoGlobe,
+  GoInfo,
+  GoOrganization,
+  GoSignOut,
+  GoGraph,
+  GoCreditCard,
+  GoHome,
+  GoBriefcase,
+  GoDeviceDesktop
+} from "react-icons/go";
 
 
 export const SidebarData = [
   {
-    title: 'Clientes',
+    title: 'Página Inicial',
     path: '/',
-    icon: <FcBusinessman />,
+    icon: <GoDeviceDesktop />,
+    cName: 'nav-text'
+  },
+  {
+    title: 'Clientes',
+    path: '/clientes',
+    icon: <GoPerson />,
     cName: 'nav-text'
   },
   {
     title: 'Imóveis',
     path: '/imoveis',
-    icon: <FcHome />,
+    icon: <GoHome />,
     cName: 'nav-text',
   },
   {
     title: 'Aluguéis',
     path: '/alugueis',
-    icon: <FcOvertime />,
+    icon: <GoCalendar />,
     cName: 'nav-text'
   },
   {
     title: 'Financeiro',
     path: '/financeiro',
-    icon: <FcCurrencyExchange />,
+    icon: <GoGraph />,
     cName: 'nav-text'
   },
   
   {
     title: 'Relatórios',
     path: '/relatorios',
-    icon: <FcRules />,
+    icon: <GoFile />,
     cName: 'nav-text'
   },
   {
     title: 'Cidades',
     path: '/cidades',
-    icon: <FcGlobe />,
+    icon: <GoGlobe />,
     cName: 'nav-text'
   },
   {
     title: 'Funcionários',
     path: '/funcionarios',
-    icon: <FcManager />,
+    icon: <GoOrganization />,
     cName: 'nav-text'
   },
   {
     title: 'Forncedores',
     path: '/fornecedores',
-    icon: <FcShipped />,
+    icon: <GoBriefcase />,
     cName: 'nav-text'
   },
   {
     title: 'Bancos',
     path: '/bancos',
-    icon: <FcSafe />,
+    icon: <GoCreditCard />,
     cName: 'nav-text'
   },
   {
     title: 'Gerais',
     path: '/gerais',
-    icon: <FcSupport />,
+    icon: <GoGear />,
     cName: 'nav-text'
   },
   {
     title: 'Sobre',
     path: '/sobre',
-    icon: <FcInfo />,
-    cName: 'nav-text'
-  },
-  {
-    title: 'Sair',
-    path: '/login',
-    icon: <FcImport />,
+    icon: <GoInfo />,
     cName: 'nav-text'
   }
 ];
