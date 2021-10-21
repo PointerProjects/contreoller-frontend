@@ -1,6 +1,6 @@
 .main {
     width: calc(100% - 215px);
-    margin: 40px 0 0 215px;
+    margin: 100px 0 0 215px;
     transition: 550ms;
     display: flex;
     justify-content: space-around;
@@ -9,98 +9,302 @@
 
 .mainMenu {
     width: calc(100% - 60px);
-    margin: 40px 0 0 60px;
+    margin: 100px 0 0 60px;
     transition: 850ms;
     display: flex;
     justify-content: space-around;
     align-items: flex-start;
 }
 
-.lastAccess {
-    width: 50%;
-    height: 400px;
-    box-shadow: 0px 10px 16px -2px rgba(0,0,0,0.54);
-    border-top: 3px solid #3bb54a;
-    border-radius: 0.5rem;
-    text-align: center;
-    padding: 10px;
-    background-color: #fff;
+.lastsAccess {
+    width: 60%;
 
-    .buttonsAcess {
-        display: flex;
-        justify-content: space-around;
-        margin-bottom: 25px;
-    }
-
-    .button {
-        width: 5rem;
-        height: 1.5rem;
-        font-size: 1rem;
-        cursor: pointer;
-        background-color: #3bb54a;
-        border: 0;
-        border-radius: 1rem;
-
-        &:hover {
-            filter: brightness(0.9);
-        }
-    }
-
-    .buttonSelected {
-        width: 5rem;
-        height: 1.5rem;
-        font-size: 1rem;
-        cursor: pointer;
-        background-color: #3bb54a;
-        border: 0;
-        border-radius: 1rem;
-        opacity: 0.4;
-    }
-
-    table, td, th {
-        border-bottom: 1px solid black;
-    }
-      
-    table {
+    .lastAccessProperty {
         width: 100%;
-        border-collapse: collapse;
-    }
-    
-    td {
-        cursor: pointer;
-    }
-}
-
-.notices {
-    width: 30%;
-    height: 280px;
-    box-shadow: 0px 10px 16px -2px rgba(0,0,0,0.54);
-    border-top: 3px solid #4895ff;
-    border-radius: 0.5rem;
-    text-align: center;
-    padding: 10px;
-    background-color: #fff;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-
-    button {
-        width: 90%;
-        height: 1.5rem;
+        height: 250px;
+        border-radius: 0.3rem;
+        text-align: center;
+        padding: 10px;
         background-color: #fff;
-        box-shadow: 0px 10px 16px -2px rgba(0,0,0,0.54);
-        color: #153243;
-        font-size: 0.7rem;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 0 15px;
-        border-radius: 1rem;
-        cursor: pointer;
+        border: 1px solid rgba(170,170,170,0.5);
+        
+        p {
+            margin-bottom: 20px;
+            color: #333;
+            font-size: 1.2rem;
+        }
+          
+        .table {
+            width: 100%;
+            height: 85%;
+            color: #333;
+            background-color: red;
+            background: repeating-linear-gradient(
+                0deg,
+                #fff,
+                #fff 27px,
+                rgba(170,170,170,0.3) 25px,
+                rgba(170,170,170,0.3) 57px
+            );
+       
+            .tableTitle {
+                display: flex;  
 
-        span {
-            color: #b3404a;
+                p {
+                    font-size: 0.8rem;
+                }
+
+            }
+
+            .code {
+                width: 10%;
+                text-align: center;
+            }
+
+            .name {
+                width: 45%;
+                text-align: center;
+            }
+
+            .address {
+                width: 45%;
+                text-align: center;
+            }
+
+            .rows {
+                display: flex;
+                cursor: pointer;
+                
+                p {
+                    font-size: 0.8rem;
+                    margin-top: -6px;
+                }
+            }
         }
     }
+
+    
+    .lastAccessClients {
+        width: 100%;
+        height: 250px;
+        border-radius: 0.3rem;
+        text-align: center;
+        padding: 10px;
+        background-color: #fff;
+        margin: 20px 0;
+        border: 1px solid rgba(170,170,170,0.5);
+
+        p {
+            margin-bottom: 20px;
+            color: #333;
+            font-size: 1.2rem;
+        }
+          
+        .table {
+            width: 100%;
+            height: 85%;
+            color: #333;
+            background-color: red;
+            background: repeating-linear-gradient(
+                0deg,
+                #fff,
+                #fff 27px,
+                rgba(170,170,170,0.3) 25px,
+                rgba(170,170,170,0.3) 57px
+            );
+       
+            .tableTitle {
+                display: flex;  
+
+                p {
+                    font-size: 0.8rem;
+                }
+
+            }
+
+            .code {
+                width: 10%;
+                text-align: center;
+            }
+
+            .name {
+                width: 45%;
+                text-align: center;
+            }
+
+            .address {
+                width: 45%;
+                text-align: center;
+            }
+
+            .rows {
+                display: flex;
+                cursor: pointer;
+                
+                p {
+                    font-size: 0.8rem;
+                    margin-top: -6px;
+                }
+            }
+        }
+        
+    }
 }
+
+.noticesMural {
+    width: 30%;
+
+    .noticesContainer {
+        width: 100%;
+        height: 250px;
+        border-radius: 0.3rem;
+        text-align: center;
+        padding: 10px;
+        background-color: #fff;
+        border: 1px solid rgba(170,170,170,0.5);
+
+        .text {
+            color: #333;
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+
+        .notices {
+            width: 100%;
+            height: 80%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+
+            div {
+                width: 80%;
+                font-size: 0.8rem;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 0 15px;
+                border-radius: 1rem;
+                
+                span {
+                    color: #b3404a;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+
+    .mural {
+        width: 100%;
+        height: 250px;
+        border-radius: 0.3rem;
+        text-align: center;
+        padding: 10px;
+        background-color: #fff;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        margin: 20px 0;
+        text-align: left;
+        border: 1px solid rgba(170,170,170,0.5);
+
+        .text {
+            color: #333;
+            font-size: 1.2rem;
+        }
+        
+        ul {
+            width: 100%;
+            font-size: 0.8rem;
+            margin: 20px 0 0 30px;
+            font-size: 0.8rem;
+        }
+
+        li {
+            margin-bottom: 5px;
+
+            .description {
+                display: none;
+                position: absolute;
+                background-color: #555;
+                border-radius: 0.3rem;
+                padding: 10px;
+                color: #fff;
+                max-width: 300px;
+
+                p {
+                    text-align: center;
+                }
+
+                div {
+                    display: flex;
+                    justify-content: center;
+                    
+                    p, span {
+                        margin-top: 5px;
+                    }
+
+                    p {
+                        margin-left: 10px;
+                    }
+                }
+            }
+
+            &:hover .description {
+                display: block;
+            }
+        }
+    }
+
+    
+}
+
+.incompatible {
+    display: none;
+}
+
+@media screen and (max-width: 1200px) {
+    .main, .mainMenu {
+        display: block;
+    }
+
+    .lastsAccess {
+        width: 95%;
+    }
+
+    .noticesMural {
+        width: 95%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        
+        .noticesContainer, .mural {
+            width: 45%;
+        }
+    }
+
+  }
+
+  @media screen and (max-width: 760px) {
+      .noticesMural {
+          display: block;
+          .noticesContainer, .mural {
+            width: 80%;
+            margin: 0 auto;
+            margin-bottom: 20px;
+        }
+      }
+  }
+
+  @media screen and (max-width: 480px) {
+    .main, .mainMenu {
+        display: none;
+    }
+
+    .incompatible {
+        display: block;
+    }
+
+}
+

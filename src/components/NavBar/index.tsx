@@ -2,12 +2,13 @@ import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 
 import { IconContext } from 'react-icons';
-import { GoThreeBars, GoSignOut } from 'react-icons/go';
+import { GoSignOut } from 'react-icons/go';
 
 import { MenuContext } from '../../contexts/menu';
 import { SidebarData } from './SidebarData';
 
 import perfilImg from '../../assets/perfil.jpg';
+import logoImg from '../../assets/logo.png';
 
 import styles from "./styles.module.scss";
 
@@ -21,32 +22,44 @@ export function NavBar() {
     <div className={styles.navBarBoxWrapper}>
       <div className={styles.menu}>
         <Link to='#' className={styles.menuBars}>
-          <GoThreeBars onClick={showSidebar} />
+          <img src={logoImg} alt="Pointer Softwares" onClick={showSidebar} />
         </Link>
-        <h2 className={styles.title}>Pointer Controller</h2>
+        <h2 className={styles.title}>Pointer Imobiliária</h2>
       </div>
 
       <div className={styles.user}>
-        <img src={perfilImg} />
+        <img src={perfilImg} alt="Imagem de Perfil" />
         <Link to='/login'>
           <GoSignOut size="20" />
         </Link>
       </div>
     </div>
 
-    <nav  className={`${styles.navMenu} ${sideBar ? styles.active : ""}`}>
+    <nav className={`${styles.navMenu} ${sideBar ? styles.active : ""}`}>
           <ul className={styles.navMenuItems}>
             {SidebarData.map((item, index) => {
               return (
                 <>
-                <li key={index} className={styles.navText}>
-                  <Link to={item.path}>
-                    <div className={sideBar ? styles.iconMenu : styles.icon}>
-                      {item.icon}
-                    </div>
-                    <span className={sideBar ? styles.spanMenu : styles.span}>{item.title}</span>                                   
-                  </Link>
-                </li>
+                {sideBar ? 
+                  <li key={index} className={styles.navText} onClick={showSidebar}>
+                    <Link to={item.path}>
+                      <div className={styles.iconMenu}>
+                        {item.icon}
+                      </div>
+                      <span className={sideBar ? styles.spanMenu : styles.span}>{item.title}</span>                                   
+                    </Link>
+                  </li>
+                :
+                  <li key={index} className={styles.navText}>
+                    <Link to={item.path}>
+                      <div className={styles.icon}>
+                        {item.icon}
+                      </div>
+                      <span className={sideBar ? styles.spanMenu : styles.span}>{item.title}</span>                                   
+                    </Link>
+                  </li>
+                }
+                
                 </>
               );
             })}

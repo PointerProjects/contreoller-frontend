@@ -8,9 +8,9 @@
 body {
   background-color: #e1e1e6;
   color: #121214;
+  height: 100%;
 }
 
 ::-webkit-scrollbar {
   width: 0px;
 }
-
