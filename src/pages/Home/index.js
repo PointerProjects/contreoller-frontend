@@ -1,12 +1,28 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { NavBar } from "../../components/NavBar";
 
 import { MenuContext } from '../../contexts/menu';
 
 import styles from "./styles.module.scss";
 
+import api  from '../../services/api';
+
 export function Home() {
   const { sideBar } = useContext(MenuContext);
+  const [clientes, setClientes] = useState([]);
+  const [imoveis, setImoveis] = useState([]);
+
+  useEffect(() => {
+    api.get('/cliente').then((response) => {
+      setClientes(response.data.rows.splice(0,5))
+    });
+  }, []);
+
+  useEffect(() => {
+    api.get('/imovel').then((response) => {
+      setImoveis(response.data.rows.splice(0,5))
+    });
+  }, []);
 
   return (
     <div className={styles.homeContainer}>
@@ -18,34 +34,16 @@ export function Home() {
             <div className={styles.table}>
               <div className={styles.tableTitle}>
                 <p className={styles.code}>Código</p>
-                <p className={styles.name}>Nome do Cliente</p>
                 <p className={styles.address}>Endereço</p>
+                <p className={styles.type}>Categoria</p>
               </div>
-              <div className={styles.rows}>
-                <p className={styles.code}>1257</p>
-                <p className={styles.name}>Juliana Azevedo</p>
-                <p className={styles.address}>Rua Mariz e Barros, nº 1515</p>
-              </div>
-              <div className={styles.rows}>
-                <p className={styles.code}>1257</p>
-                <p className={styles.name}>Juliana Azevedo</p>
-                <p className={styles.address}>Rua Mariz e Barros, nº 1515</p>
-              </div>
-              <div className={styles.rows}>
-                <p className={styles.code}>1257</p>
-                <p className={styles.name}>Juliana Azevedo</p>
-                <p className={styles.address}>Rua Mariz e Barros, nº 1515</p>
-              </div>
-              <div className={styles.rows}>
-                <p className={styles.code}>1257</p>
-                <p className={styles.name}>Juliana Azevedo</p>
-                <p className={styles.address}>Rua Mariz e Barros, nº 1515</p>
-              </div>
-              <div className={styles.rows}>
-                <p className={styles.code}>1257</p>
-                <p className={styles.name}>Juliana Azevedo</p>
-                <p className={styles.address}>Rua Mariz e Barros, nº 1515</p>
-              </div>
+              {imoveis.map((imovel, index) => (
+                <div className={styles.rows} key={index}>
+                  <p className={styles.code}>{imovel.id}</p>
+                  <p className={styles.address}>{imovel.logradouro}</p>
+                  <p className={styles.type}>{imovel.tipo}</p>
+                </div>
+              ))}
             </div>
           </div>
 
@@ -57,31 +55,13 @@ export function Home() {
                 <p className={styles.name}>Nome do Cliente</p>
                 <p className={styles.address}>Endereço</p>
               </div>
-              <div className={styles.rows}>
-                <p className={styles.code}>1257</p>
-                <p className={styles.name}>Juliana Azevedo</p>
-                <p className={styles.address}>Rua Mariz e Barros, nº 1515</p>
-              </div>
-              <div className={styles.rows}>
-                <p className={styles.code}>1257</p>
-                <p className={styles.name}>Juliana Azevedo</p>
-                <p className={styles.address}>Rua Mariz e Barros, nº 1515</p>
-              </div>
-              <div className={styles.rows}>
-                <p className={styles.code}>1257</p>
-                <p className={styles.name}>Juliana Azevedo</p>
-                <p className={styles.address}>Rua Mariz e Barros, nº 1515</p>
-              </div>
-              <div className={styles.rows}>
-                <p className={styles.code}>1257</p>
-                <p className={styles.name}>Juliana Azevedo</p>
-                <p className={styles.address}>Rua Mariz e Barros, nº 1515</p>
-              </div>
-              <div className={styles.rows}>
-                <p className={styles.code}>1257</p>
-                <p className={styles.name}>Juliana Azevedo</p>
-                <p className={styles.address}>Rua Mariz e Barros, nº 1515</p>
-              </div>
+              {clientes.map((cliente, index) => (
+                <div className={styles.rows} key={index}>
+                  <p className={styles.code}>{cliente.id}</p>
+                  <p className={styles.name}>{cliente.nome} {cliente.sobrenome}</p>
+                  <p className={styles.address}>{cliente.logradouro}</p>
+                </div>
+              ))}
             </div>
           </div>
         </div>

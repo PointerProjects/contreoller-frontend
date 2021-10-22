@@ -1,17 +1,8 @@
-import React, { createContext, ReactNode, useState } from "react";
+import React, { createContext, useState } from "react";
 
-type MenuContextData = {
-    sideBar: boolean;
-    showSidebar: () => void;
-};
+export const MenuContext = createContext();
 
-export const MenuContext = createContext({} as MenuContextData);
-
-type MenuProvider = {
-    children: ReactNode;
-};
-
-export function MenuProvider(props: MenuProvider) {
+export function MenuProvider(props) {
     const [sideBar, setSideBar] = useState(false);
   
     function showSidebar() {

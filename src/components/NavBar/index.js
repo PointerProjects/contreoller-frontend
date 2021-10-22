@@ -15,8 +15,6 @@ import styles from "./styles.module.scss";
 export function NavBar() {
   const { showSidebar, sideBar } = useContext(MenuContext);
 
-  console.log(sideBar)
-
   return (
     <IconContext.Provider value={{ color: '#555' }}>
     <div className={styles.navBarBoxWrapper}>
@@ -41,7 +39,7 @@ export function NavBar() {
               return (
                 <>
                 {sideBar ? 
-                  <li key={index} className={styles.navText} onClick={showSidebar}>
+                  <li key={item.title} className={styles.navText} onClick={showSidebar}>
                     <Link to={item.path}>
                       <div className={styles.iconMenu}>
                         {item.icon}
@@ -59,7 +57,6 @@ export function NavBar() {
                     </Link>
                   </li>
                 }
-                
                 </>
               );
             })}
