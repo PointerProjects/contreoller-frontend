@@ -8,12 +8,12 @@ import styles from "./styles.module.scss";
 
 import api from '../../services/api';
 
-export function Properties() {
+export function Clients() {
   const { sideBar } = useContext(MenuContext);
-  const [imoveis, setImoveis] = useState([]);
+  const [clientes, setClientes] = useState([]);
   const [form, setForm] = useState(false);
-  const [proprietario, setProprietario] = useState('');
-  const [tipo, setTipo] = useState('');
+  const [nome, setNome] = useState('');
+  const [sobrenome, setSobrenome] = useState('');
   const [estado, setEstado] = useState('');
   const [cidade, setCidade] = useState('');
   const [bairro, setBairro] = useState('');
@@ -30,21 +30,21 @@ export function Properties() {
   function handleCadastrar(e) {
     e.preventDefault();
 
-    if (!proprietario || !tipo || !estado || !cidade || !bairro || !logradouro) {
+    if (!nome || !sobrenome || !estado || !cidade || !bairro || !logradouro) {
       return alert('Todos os campos devem ser preenchidos!');
     }
 
     api
-      .post('./imovel', {
-        proprietario,
-        tipo,
+      .post('./cliente', {
+        nome,
+        sobrenome,
         estado,
         cidade,
         bairro,
         logradouro
       })
       .then((response) => {
-        alert('Imóvel cadastrado com sucesso');
+        alert('Cliente cadastrado com sucesso');
 
         clearInputs();
         setForm(false);
@@ -55,8 +55,8 @@ export function Properties() {
   }
 
   function clearInputs() {
-    setProprietario('');
-    setTipo('');
+    setNome('');
+    setSobrenome('');
     setEstado('');
     setCidade('');
     setBairro('');
@@ -64,8 +64,8 @@ export function Properties() {
   }
 
   useEffect(() => {
-    api.get('/imovel').then((response) => {
-      setImoveis(response.data.rows.splice(0,10))
+    api.get('/cliente').then((response) => {
+      setClientes(response.data.rows.splice(0,10))
     });
   }, [form]);
 
@@ -78,12 +78,12 @@ export function Properties() {
           <div className={styles.clientesCadastro}>
             <form>
               <div>
-                <p>Proprietário:</p>
-                <input value={proprietario} onChange={(e) => {setProprietario(e.target.value);}} />
+                <p>Nome:</p>
+                <input value={nome} onChange={(e) => {setNome(e.target.value);}} />
               </div>
               <div>
-                <p>Tipo:</p>
-                <input value={tipo} onChange={(e) => {setTipo(e.target.value);}} />
+                <p>Sobrenome:</p>
+                <input value={sobrenome} onChange={(e) => {setSobrenome(e.target.value);}} />
               </div>
               <div>
                 <p>Estado:</p>
@@ -110,18 +110,18 @@ export function Properties() {
           </div>
         :
           <div className={styles.clients}>
-            <p>Imóveis</p>
+            <p>Clientes</p>
             <div className={styles.table}>
               <div className={styles.tableTitle}>
                 <p className={styles.code}>Código</p>
+                <p className={styles.name}>Nome do Cliente</p>
                 <p className={styles.address}>Endereço</p>
-                <p className={styles.type}>Categoria</p>
               </div>
-              {imoveis.map((imovel, index) => (
+              {clientes.map((cliente, index) => (
                 <div className={styles.rows} key={index}>
-                  <p className={styles.code}>{imovel.id}</p>
-                  <p className={styles.address}>{imovel.logradouro}</p>
-                  <p className={styles.type}>{imovel.tipo}</p>
+                  <p className={styles.code}>{cliente.id}</p>
+                  <p className={styles.name}>{cliente.nome} {cliente.sobrenome}</p>
+                  <p className={styles.address}>{cliente.logradouro}</p>
                 </div>
               ))}
             </div>
