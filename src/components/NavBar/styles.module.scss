@@ -1,7 +1,7 @@
 .navBarBoxWrapper {
   width: 100vw;
-  background-color: #fff;
-  height: 80px;
+  background-color: #c4c4c4;
+  height: 65px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -10,6 +10,7 @@
   position: fixed;
   top: 0;
   z-index: 999;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   
   .menu {
     display: flex;
@@ -22,42 +23,31 @@
       display: flex;
       align-items: center;
     }
-
-    img {
-      width: 40px;
-    }
   
     .title {
-      color: #333;
-      font-size: 1.5rem;
+      color: #4C819F;
+      font-size: 28px;
+      font-weight: 500;
       margin-left: 20px;
     }
   }
 
-  .user {
-    width: 5rem;
-    height: 80px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
     img {
-      width: 50px;
-      height: 50px;
+      width: 40px;
+      height: 40px;
       border-radius: 25px;
       cursor: pointer;
     }
-  }
 }
 
 .navMenu {
-  background-color: #fff;
+  background-color: #7A7575;
   width: 50px;
-  height: calc(100vh - 80px);
+  height: calc(100vh - 65px);
   display: flex;
   justify-content: center;
   position: fixed;
-  top: 80px;
+  top: 65px;
   transition: 850ms;
   border-right: 1px solid #999;
   overflow: auto;
@@ -72,28 +62,30 @@
       list-style: none;
       height: 50px;
   
-      a {
+      .item {
         text-decoration: none;
-        color: #333;
-        font-size: 1rem;
+        color: #fff;
+        font-size: 16px;
         width: 100%;
         height: 100%;
         display: flex;
         align-items: center;
         justify-content: flex-start;
+        font-weight: 500;
+        cursor: pointer;
   
         &:hover {
-          background-color:#e1e1e6;
+          background-color:#c4c4c4;
         }
 
         .icon {
           font-size: 30px;
-          margin-left: 7px;
+          margin-left: 10px;
         }
 
         .iconMenu {
           font-size: 30px;
-          margin-left: 27px;
+          margin-left: 30px;
         }
 
         .spanMenu {
@@ -105,11 +97,26 @@
         }
       }
     }
+
+    .subitemCadastros {
+      list-style: none;
+      margin-left: 85px;
+
+      li {
+        color: #fff;
+        margin-bottom: 15px;
+        cursor: pointer;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
   }
 }
 
 .active {
-  width: 220px;
+  width: 250px;
   left: -20px;
   transition: 550ms;
 }

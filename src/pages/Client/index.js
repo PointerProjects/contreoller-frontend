@@ -8,7 +8,7 @@ import styles from "./styles.module.scss";
 
 import api from '../../services/api';
 
-export function Clients() {
+export function Client() {
   const { sideBar } = useContext(MenuContext);
   const [clientes, setClientes] = useState([]);
   const [form, setForm] = useState(false);
@@ -18,10 +18,6 @@ export function Clients() {
   const [cidade, setCidade] = useState('');
   const [bairro, setBairro] = useState('');
   const [logradouro, setLogradouro] = useState('');
-
-  function handleForm() {
-    setForm(true);
-  }
 
   function handleCancelar() {
     setForm(false);
@@ -70,7 +66,7 @@ export function Clients() {
   }, [form]);
 
   return (
-    <div className={styles.clientsContainer}>
+    <div className={styles.clientContainer}>
       <NavBar />
 
       <div className={sideBar ? styles.main : styles.mainMenu}>
