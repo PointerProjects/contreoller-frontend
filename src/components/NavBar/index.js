@@ -8,7 +8,11 @@ import {
   GoPerson,
   GoGraph,
   GoBriefcase,
-  GoDeviceDesktop
+  GoDeviceDesktop,
+  GoFile,
+  GoLock,
+  GoInfo,
+  GoSignOut
 } from 'react-icons/go';
 
 import { MenuContext } from '../../contexts/menu';
@@ -67,14 +71,16 @@ export function NavBar() {
           <ul className={styles.navMenuItems}>
             {sideBar ? 
               <>
-                <li className={styles.navText}>
-                  <div className={styles.item}>
-                    <div className={styles.iconMenu}>
-                      <GoDeviceDesktop size={24} />
+                <Link to="/">
+                  <li className={styles.navText}>
+                    <div className={styles.item}>
+                      <div className={styles.iconMenu}>
+                        <GoDeviceDesktop size={24} />
+                      </div>
+                      <span className={sideBar ? styles.spanMenu : styles.span}>Dashboard</span>                                   
                     </div>
-                    <span className={sideBar ? styles.spanMenu : styles.span}>Dashboard</span>                                   
-                  </div>
-                </li>
+                  </li>
+                </Link>
                 <li className={styles.navText} onClick={activeCadastros}>
                   <div className={styles.item}>
                     <div className={styles.iconMenu}>
@@ -85,7 +91,9 @@ export function NavBar() {
                 </li>
                 {cadastros ? 
                   <ul className={styles.subitemCadastros}>
-                    <li>Imóveis</li>
+                    <Link to="/imovel">
+                      <li>Imóveis</li>
+                    </Link>
                     <li>Clientes</li>
                     <li>Tipo de Imóveis</li>
                     <li>Tipo de Clientes</li>
@@ -95,7 +103,15 @@ export function NavBar() {
                     <li>Bairros</li>
                     <li>Funcionários</li>
                     <li>Cargos</li>
+                    <li>Profissões</li>
                     <li>Fornecedores</li>
+                    <li>Bancos</li>
+                    <li>Contas Bancárias</li>
+                    <li>Vantagens</li>
+                    <li>Destaques</li>
+                    <li>Empresa</li>
+                    <li>Foto cidade</li>
+                    <li>Vídeos</li>
                   </ul>
                 : null}  
                 <li className={styles.navText} onClick={activeControle}>
@@ -124,19 +140,54 @@ export function NavBar() {
                 {financeiro ? 
                   <ul className={styles.subitemCadastros}>
                     <li>Caixa</li>
+                    <li>Movimento Bancário</li>
                   </ul>
                 : null} 
+                <li className={styles.navText}>
+                  <div className={styles.item}>
+                    <div className={styles.iconMenu}>
+                      <GoFile size={24} />
+                    </div>
+                    <span className={sideBar ? styles.spanMenu : styles.span}>Relatórios</span>                                   
+                  </div>
+                </li>
+                <li className={styles.navText}>
+                  <div className={styles.item}>
+                    <div className={styles.iconMenu}>
+                      <GoLock size={24} />
+                    </div>
+                    <span className={sideBar ? styles.spanMenu : styles.span}>Segurança</span>                                   
+                  </div>
+                </li>
+                <li className={styles.navText}>
+                  <div className={styles.item}>
+                    <div className={styles.iconMenu}>
+                      <GoInfo size={24} />
+                    </div>
+                    <span className={sideBar ? styles.spanMenu : styles.span}>Sobre</span>                                   
+                  </div>
+                </li>
+                <li className={styles.navText}>
+                  <div className={styles.item}>
+                    <div className={styles.iconMenu}>
+                      <GoSignOut size={24} />
+                    </div>
+                    <span className={sideBar ? styles.spanMenu : styles.span}>Sair</span>                                   
+                  </div>
+                </li>
               </>
             :
               <>
-                <li className={styles.navText}>
-                  <div className={styles.item}>
-                    <div className={styles.icon}>
-                      <GoDeviceDesktop size={24} />
+                <Link to="/">
+                  <li className={styles.navText}>
+                    <div className={styles.item}>
+                      <div className={styles.icon}>
+                        <GoDeviceDesktop size={24} />
+                      </div>
+                      <span className={sideBar ? styles.spanMenu : styles.span}>Dashboard</span>                                   
                     </div>
-                    <span className={sideBar ? styles.spanMenu : styles.span}>Dashboard</span>                                   
-                  </div>
-                </li>
+                  </li>
+                </Link>
                 <li className={styles.navText} onClick={showSidebar}>
                   <div className={styles.item} onClick={activeCadastros}>
                     <div className={styles.icon}>
@@ -159,6 +210,38 @@ export function NavBar() {
                       <GoGraph size={24} />
                     </div>
                     <span className={sideBar ? styles.spanMenu : styles.span}>Financeiro</span>                                   
+                  </div>
+                </li>
+                <li className={styles.navText}>
+                  <div className={styles.item}>
+                    <div className={styles.icon}>
+                      <GoFile size={24} />
+                    </div>
+                    <span className={sideBar ? styles.spanMenu : styles.span}>Relatórios</span>                                   
+                  </div>
+                </li>
+                <li className={styles.navText}>
+                  <div className={styles.item}>
+                    <div className={styles.icon}>
+                      <GoLock size={24} />
+                    </div>
+                    <span className={sideBar ? styles.spanMenu : styles.span}>Segurança</span>                                   
+                  </div>
+                </li>
+                <li className={styles.navText}>
+                  <div className={styles.item}>
+                    <div className={styles.icon}>
+                      <GoInfo size={24} />
+                    </div>
+                    <span className={sideBar ? styles.spanMenu : styles.span}>Sobre</span>                                   
+                  </div>
+                </li>
+                <li className={styles.navText}>
+                  <div className={styles.item}>
+                    <div className={styles.icon}>
+                      <GoSignOut size={24} />
+                    </div>
+                    <span className={sideBar ? styles.spanMenu : styles.span}>Sair</span>                                   
                   </div>
                 </li>
               </>

@@ -3,7 +3,7 @@ import React, { useContext } from "react";
 import { 
   GoDeviceDesktop,
   GoCalendar,
-  GoPlusSmall,
+  GoPlus,
   GoFile,
   GoHome,
 } from 'react-icons/go';
@@ -31,14 +31,14 @@ export function Home() {
             <GoCalendar color="#B4B4B4" size={24} />
             <p>Agenda</p>
             <div>
-              <GoPlusSmall color="#000" size={28} />
+              <GoPlus color="#555" size={20} />
             </div>
           </div>
           <div className={styles.subtitle}>
             <GoFile color="#B4B4B4" size={24} />
             <p>Mural</p>
             <div>
-              <GoPlusSmall color="#000" size={28} />
+              <GoPlus color="#555" size={20} />
             </div>
           </div>
         </div>
@@ -99,7 +99,7 @@ export function Home() {
               <GoHome color="#B4B4B4" size={24} />
               <p>Imóveis - Últimos Acessados</p>
             </div>
-            <GoPlusSmall color="#000" size={28} />
+            <GoPlus color="#555" size={20} />
           </div>
         </div>
 

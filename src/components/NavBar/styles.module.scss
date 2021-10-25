@@ -56,6 +56,10 @@
   .navMenuItems {
     width: 100%;
 
+    a {
+      text-decoration: none;
+    }
+
     .navText {
       display: flex;
       align-items: center;
@@ -101,6 +105,10 @@
     .subitemCadastros {
       list-style: none;
       margin-left: 85px;
+
+      a {
+        text-decoration: none;
+      }
 
       li {
         color: #fff;
