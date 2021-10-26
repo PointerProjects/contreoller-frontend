@@ -74,62 +74,86 @@
         }
     }
 
-    .flexColumn {
-        height: 180px;
+    .flexFiltro {
         margin-top: 15px;
+        width: 100%;
         display: flex;
-        flex-direction: column;
-        justify-content: space-around;
+
+        div {
+            width: 100%;
+        }
 
         input {
+            width: 90%;
             height: 24px;
         }
 
-        .input {
-            display: flex;
-            justify-content: space-between;
-            width: 250px;
-
-            input {
-                width: 120px;
-            }
-        }
-
         .flexCheckbox {
-            width: 250px;
             display: flex;
-            justify-content: space-between;
+            align-items: center;
+            justify-content: left;
+            width: 250px;
+            height: 24px;
+            margin-left: -4px;
 
             .flex {
-                justify-content: start;
+                margin-right: 10px;
+
+                input {
+                    height: 20px;
+                }
 
                 p {
-                    margin-left: 15px;
+                    margin: 0 20px 0 10px;
                 }
             }
         }
 
-        .flexButtons {
+        .input {
+            width: 90%;
             display: flex;
             justify-content: space-between;
-            width: 250px;
+
+            input {
+                width: 48%;
+            }
         }
 
-        .buttonClean {
-            background-color: #FFFFFF;
-            color: #5B5B5B;
-            border: 1px solid #4C819F;
-            font-size: 16px;
-            width: 100px;
-            justify-content: center;
-        }
+        .flexButtons {
+            width: 100%;
+            display: flex;
+            justify-content: flex-end;
 
-        .buttonFiltrar {
-            font-size: 16px;
-            width: 100px;
-            justify-content: center;
-        }
+            .buttonClean {
+                width: 110px;
+                border: 1px solid #4C819F;
+                background-color: #fff;
+                color: #5B5B5B;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 6px 10px;
+                border-radius: 7px;
+                cursor: pointer;
+                font-size: 16px;
+                margin-right: 50px;
+            }
 
+            .buttonFiltrar {
+                width: 110px;
+                background-color: #4C819F;
+                color: #fff;
+                border: 0;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 6px 10px;
+                border-radius: 7px;
+                cursor: pointer;
+                font-size: 16px;
+                margin-right: 55px;
+            }
+        }
     }
 }
 
